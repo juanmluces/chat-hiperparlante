@@ -1,0 +1,145 @@
+body {
+  padding: 1em 50px;
+  font: 14px "Lucida Grande", Helvetica, Arial, sans-serif;
+  background-color: #00B7FF;
+  background-image: url('https://images.pexels.com/photos/1142950/pexels-photo-1142950.jpeg?auto=compress&cs=tinysrgb&dpr=2&h=750&w=1260');
+  background-position: center;
+  background-repeat: repeat-y;
+  background-size: cover;
+  height: 100vh;
+}
+
+.contenedor {
+  max-width: 1200px;
+  margin: auto;
+}
+
+a {
+  color: #00B7FF;
+}
+
+h1{
+  text-align: center;
+  color: white;
+  background-color: #15468293;
+  width: 50%;
+  margin: 0 auto 1em;
+  padding: 0.5em 1em;
+  border-radius: 25px;
+}
+
+h3 {
+  width: min-content;
+  padding: 0.5em 1em;
+  text-align: center;
+  margin: auto;
+  margin-bottom: 1em;
+  color: white;
+  background-color: #15468293;
+}
+
+
+
+div.chatBox{
+  background-color: rgba(33, 47, 59, 0.678);
+  height: 40vh;
+  max-height: 400px;
+  padding: 1em 2em;
+  border: 1em solid darkcyan;
+  border-radius: 25px;
+  margin-bottom: 1em;
+  overflow-y: scroll;
+}
+
+@media(max-width: 800px){
+  div.chatBox{
+    height: 80vh;
+  }
+}
+
+div.chatBox ul{
+  list-style: none;
+  padding: 0;
+}
+
+div.chatBox ul li {
+  font-weight: bold;
+  margin-bottom: 1em;
+  color: white;
+}
+
+
+
+div.chatBox ul li span.nombre{
+  background-color: lightgreen;
+  display: inline-block;
+  padding: 0 1em;
+  border: 2px solid black;
+  border-radius: 2px;
+  min-width: 10%;
+  font-size: 1rem;
+  color:black;
+
+}
+
+div.chatBox ul li span.mensaje{
+  background-color: lightblue;
+  display: inline-block;
+  min-width: 20%;
+  border-radius: 2px;
+  padding: 0 1em;
+  border: 2px solid black;
+  font-size: 1rem;
+  font-weight: normal;
+  color: black;
+}
+
+div.chatControls{
+  display: flex;
+  justify-content: space-evenly;
+  background-color: rgba(33, 47, 59, 0.699);
+  padding: 1em;
+  border: 1em solid darkcyan;
+  border-radius: 25px;
+}
+
+div.chatControls label{
+  color: white;
+}
+
+div.chatControls input.inputNombre{
+  background-color: lightgreen;
+  margin-left: 1em;
+}
+
+div.chatControls input.inputMensaje{
+  background-color: lightskyblue;
+  margin-left: 1em;
+}
+button {
+	box-shadow:inset 0px 1px 0px 0px #54a3f7;
+	background:linear-gradient(to bottom, #007dc1 5%, #0061a7 100%);
+	background-color:#007dc1;
+	border-radius:3px;
+	border:1px solid #124d77;
+	display:inline-block;
+	cursor:pointer;
+	color:#ffffff;
+	font-family:Arial;
+	font-size:13px;
+	padding:6px 24px;
+	text-decoration:none;
+	text-shadow:0px 1px 0px #154682;
+}
+button:hover {
+	background:linear-gradient(to bottom, #0061a7 5%, #007dc1 100%);
+	background-color:#0061a7;
+}
+button:active {
+	position:relative;
+	top:1px;
+}
+
+        
+
+        

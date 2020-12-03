@@ -1,0 +1,46 @@
+extends layout
+
+block content
+
+  h1 Bienvenido al chat hyper-parlante
+  h3#numUsuarios
+  .contenedor
+    div.chatBox
+      ul#ulChat.mensajes
+    div(class="chatControls")
+      div
+        label nombre
+        input#inputNombre.inputNombre(type="text")
+      div
+        label mensaje
+        input#inputMensaje.inputMensaje(type="text")
+      button#btnEnviar Enviar
+
+  script.
+    const socket = io();
+
+    const inputNombre = document.getElementById('inputNombre');
+    const inputMensaje = document.getElementById('inputMensaje');
+    const btnEnviar = document.getElementById('btnEnviar');
+    const ulChat = document.getElementById('ulChat');
+    const numUsuarios = document.getElementById('numUsuarios');
+
+    btnEnviar.addEventListener('click', ()=>{
+      socket.emit('chat_mensaje', {
+        nombre: inputNombre.value,
+        mensaje: inputMensaje.value
+      });
+    });
+
+    socket.on('chat_mensaje', data => {
+      console.log(data)
+       ulChat.innerHTML += `<li> <span class="nombre">${data.nombre}</span> : <span class="mensaje"> ${data.mensaje}</span></li> `;
+      toastr.info('Mesaje nuevo')
+      
+    });
+
+    socket.on('chat_usuarios', data => {
+      numUsuarios.innerText = 'Usuarios:'+ data
+    });
+
+    
